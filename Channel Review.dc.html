@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:#FBFAF9; }
+  ::selection{ background:#F3D3E2; }
+  a{ color:inherit; }
+</style>
+</helmet>
+
+<div data-screen-label="Channel Review" style="font-family:'Hanken Grotesk',sans-serif; color:#1B1B20; background:#FBFAF9;">
+
+  <!-- NAV -->
+  <nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 40px; background:rgba(251,250,249,0.82); backdrop-filter:blur(12px); border-bottom:1px solid #ECEAE5;">
+    <a href="#top" style="text-decoration:none; display:flex; align-items:center; gap:11px; font-weight:700; font-size:17px; letter-spacing:-0.01em;">
+      <span style="width:12px; height:12px; border-radius:50%; background:linear-gradient(135deg,#E79BBA,#7FA8DE);"></span>
+      Mariah Brunner <span style="font-family:'Geist Mono',monospace; font-weight:400; font-size:13px; color:#9B9AA2;">· Review</span>
+    </a>
+    <div style="display:flex; gap:6px; font-family:'Geist Mono',monospace; font-size:13px;">
+      <a href="#diagnosis" style="text-decoration:none; padding:7px 13px; border-radius:8px; color:#5C5B63;" style-hover="background:#F1ECF4; color:#1B1B20;">Diagnosis</a>
+      <a href="#pillars" style="text-decoration:none; padding:7px 13px; border-radius:8px; color:#5C5B63;" style-hover="background:#F1ECF4; color:#1B1B20;">Pillars</a>
+      <a onclick="{{ navFormats }}" style="cursor:pointer; text-decoration:none; padding:7px 13px; border-radius:8px; color:#5C5B63;" style-hover="background:#F1ECF4; color:#1B1B20;">Formats</a>
+      <a onclick="{{ navFeatures }}" style="cursor:pointer; text-decoration:none; padding:7px 13px; border-radius:8px; color:#5C5B63;" style-hover="background:#F1ECF4; color:#1B1B20;">Features</a>
+      <a onclick="{{ navMonet }}" style="cursor:pointer; text-decoration:none; padding:7px 13px; border-radius:8px; color:#5C5B63;" style-hover="background:#F1ECF4; color:#1B1B20;">Monetization</a>
+      <a href="#metrics" style="text-decoration:none; padding:7px 13px; border-radius:8px; color:#5C5B63;" style-hover="background:#F1ECF4; color:#1B1B20;">Metrics</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" style="position:relative; padding:96px 40px 80px; max-width:1120px; margin:0 auto; overflow:hidden;">
+    <div style="position:absolute; top:-120px; right:-100px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle at 40% 40%,#F8CEDD,#E0D2F2 42%,#C9DCF3 68%,rgba(205,235,218,0) 100%); filter:blur(10px); opacity:.7; pointer-events:none;"></div>
+    <div style="font-family:'Geist Mono',monospace; font-size:14px; letter-spacing:.2em; text-transform:uppercase; color:#8A8992;">Channel Review · YouTube</div>
+    <h1 style="margin:22px 0 0; font-size:60px; line-height:1.02; font-weight:800; letter-spacing:-0.035em; max-width:880px; text-wrap:balance;">A growth playbook for <span style="background:linear-gradient(100deg,#E79BBA,#B89BDC,#7FA8DE,#73C49B);-webkit-background-clip:text;background-clip:text;color:transparent;">@ItsMariahBrunner.</span></h1>
+    <p style="margin:32px 0 0; font-size:23px; line-height:1.5; color:#3C3B42; max-width:700px;">Clear niche, strong positioning. The next unlock is architecture and format diversification — reviewing how that knowledge gets packaged, ranked, and converted into a recurring audience and paying customers.</p>
+    <div style="margin-top:28px; display:flex; flex-wrap:wrap; gap:10px; font-family:'Geist Mono',monospace; font-size:13px;">
+      <span style="padding:7px 13px; border-radius:999px; background:#F4DCE8; color:#9E5A7C;">Strategy</span>
+      <span style="padding:7px 13px; border-radius:999px; background:#E9E0F4; color:#7B6BB0;">Format</span>
+      <span style="padding:7px 13px; border-radius:999px; background:#DFE8F6; color:#5E84B0;">Features</span>
+      <span style="padding:7px 13px; border-radius:999px; background:#DEEEE4; color:#5C9B7A;">Distribution</span>
+      <span style="padding:7px 13px; border-radius:999px; background:#F0E8D6; color:#A98E4E;">Monetization</span>
+      <span style="padding:7px 13px; border-radius:999px; background:#F4DCE8; color:#9E5A7C;">Metrics</span>
+    </div>
+    <div style="margin-top:34px; display:flex; flex-wrap:wrap; gap:18px 30px; align-items:center; font-family:'Geist Mono',monospace; font-size:14px; color:#5C5B63;">
+      <span style="color:#8A8992;">Prepared by</span>
+      <strong style="font-weight:500; color:#1B1B20; font-size:16px;">@smartinsmarina</strong>
+      <a href="https://www.linkedin.com/in/smartinsmarina/" target="_blank" rel="noopener" style="text-decoration:none; color:#5C5B63; border-bottom:1px solid #D8D6D1;" style-hover="color:#9E5A7C;">linkedin.com/in/smartinsmarina ↗</a>
+      <span style="color:#B5B4BA;">June 2026</span>
+    </div>
+  </header>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section style="padding:8px 40px 40px; max-width:1120px; margin:0 auto;">
+    <div style="background:#fff; border:1px solid #ECEAE5; border-radius:20px; padding:38px 40px; display:grid; grid-template-columns:0.8fr 1.2fr; gap:40px;">
+      <div>
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#9E5A7C; margin-bottom:10px;">Executive summary</div>
+        <h3 style="margin:0; font-size:27px; font-weight:700; letter-spacing:-0.01em; line-height:1.18;">You already own the content.</h3>
+      </div>
+      <p style="margin:0; align-self:center; font-size:18px; line-height:1.6; color:#4A4951;">Let's use YouTube to the fullest to grow your community and strengthen your personal brand. The next stage of growth is <strong style="font-weight:600;">structural</strong>, then <strong style="font-weight:600;">format diversification</strong>, then <strong style="font-weight:600;">funnel and feature usage to amplify monetization</strong>. Helping people use Claude to work smarter and make money — without needing to be technical.</p>
+    </div>
+  </section>
+
+  <!-- DIAGNOSIS -->
+  <section id="diagnosis" style="padding:48px 40px 64px; max-width:1120px; margin:0 auto;">
+    <div style="font-family:'Geist Mono',monospace; font-size:14px; letter-spacing:.16em; text-transform:uppercase; color:#9E5A7C; margin-bottom:14px;">01 · Diagnosis</div>
+    <h2 style="margin:0 0 8px; font-size:42px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Where the channel stands today.</h2>
+    <div style="margin-top:30px; display:flex; gap:10px; font-family:'Geist Mono',monospace; font-size:13px;">
+      <button style="{{ tabAStyle }}">✓ What's already working</button>
+      <button onclick="{{ tabFocus }}" style="{{ tabBStyle }}">→ Where to focus</button>
+    </div>
+
+    <div style="margin-top:26px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;">
+      <sc-for list="{{ diagCards }}" as="c" hint-placeholder-count="3">
+        <div style="padding:26px 24px; background:#fff; border:1px solid #ECEAE5; border-radius:16px;" style-hover="border-color:#E0CCE0; box-shadow:0 6px 20px rgba(150,110,160,0.08);">
+          <div style="font-family:'Geist Mono',monospace; font-size:13px; color:{{ c.tone }}; margin-bottom:10px;">{{ c.tag }}</div>
+          <div style="font-size:21px; font-weight:600; margin-bottom:8px; line-height:1.2;">{{ c.title }}</div>
+          <div style="font-size:16.5px; line-height:1.55; color:#5A5961;">{{ c.body }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- PILLARS / IMPROVEMENT PLAN -->
+  <section id="pillars" style="padding:64px 40px; background:linear-gradient(180deg,#FBFAF9,#F7F3F8);">
+    <div style="max-width:1120px; margin:0 auto;">
+      <div style="font-family:'Geist Mono',monospace; font-size:14px; letter-spacing:.16em; text-transform:uppercase; color:#7B6BB0; margin-bottom:14px;">02 · The improvement plan</div>
+      <h2 style="margin:0 0 6px; font-size:42px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Five pillars to revise.</h2>
+      <p style="margin:0; font-size:19px; color:#6A6970;">Click a pillar to open the details.</p>
+
+      <div style="margin-top:30px; display:grid; grid-template-columns:repeat(5,1fr); gap:10px;">
+        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="5">
+          <button onclick="{{ p.select }}" style="{{ p.chipStyle }}">
+            <div style="font-family:'Geist Mono',monospace; font-size:13px; opacity:.7;">{{ p.num }}</div>
+            <div style="font-size:14.5px; font-weight:600; line-height:1.2; margin-top:6px;">{{ p.short }}</div>
+          </button>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:22px; background:#fff; border:1px solid #ECE6F0; border-radius:20px; padding:40px; min-height:240px;">
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#B0728F; margin-bottom:6px;">Pillar {{ activePillar.num }} · {{ activePillar.label }}</div>
+        <h3 style="margin:0 0 20px; font-size:30px; font-weight:700; letter-spacing:-0.01em; line-height:1.15;">{{ activePillar.headline }}</h3>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <sc-for list="{{ activePillar.points }}" as="pt" hint-placeholder-count="3">
+            <div style="display:flex; gap:14px;">
+              <div style="color:{{ pt.tone }}; font-size:20px; line-height:1.3;">›</div>
+              <div style="font-size:17.5px; line-height:1.55; color:#3C3B42;"><strong style="font-weight:600; color:#1B1B20;">{{ pt.lead }}</strong>{{ pt.rest }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATS / FUNNEL (Pillar 03) -->
+  <sc-if value="{{ showFunnel }}" hint-placeholder-val="{{ true }}">
+  <section id="formats" style="padding:64px 40px; max-width:1120px; margin:0 auto;">
+    <div style="font-family:'Geist Mono',monospace; font-size:14px; letter-spacing:.16em; text-transform:uppercase; color:#5E84B0; margin-bottom:14px;">Pillar 03 · Content &amp; Formats</div>
+    <h2 style="margin:0 0 8px; font-size:42px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Without long form, a creator.<br>With it, an authority.</h2>
+    <p style="margin:0 0 28px; font-size:19px; line-height:1.5; color:#6A6970; max-width:680px;">Shorts sell low-ticket products; long form (8–20 min) sells bootcamps, agents, and cohorts. Hover the stages of the funnel.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+      <sc-for list="{{ funnel }}" as="f" hint-placeholder-count="3">
+        <div onmouseenter="{{ f.hover }}" style="{{ f.cardStyle }}">
+          <div style="height:8px; border-radius:999px; background:{{ f.bar }}; margin-bottom:18px; width:{{ f.barW }};"></div>
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <span style="font-size:23px; font-weight:700;">{{ f.name }}</span>
+            <span style="font-family:'Geist Mono',monospace; font-size:13px; color:#9B9AA2;">{{ f.stage }}</span>
+          </div>
+          <div style="font-family:'Geist Mono',monospace; font-size:13px; color:#9B9AA2; margin:8px 0 14px;">{{ f.dur }}</div>
+          <div style="font-size:16.5px; line-height:1.5; color:#5A5961;">{{ f.body }}</div>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px dashed #E7E1EA; font-size:15px; color:#9E5A7C;"><strong style="font-weight:600;">Goal:</strong> {{ f.goal }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- FEATURES / COLLAB LADDER (Pillar 04) — compact -->
+  <sc-if value="{{ showLadder }}" hint-placeholder-val="{{ true }}">
+  <section id="features" style="padding:48px 40px; background:linear-gradient(180deg,#F7F3F8,#FBFAF9);">
+    <div style="max-width:1120px; margin:0 auto;">
+      <div style="font-family:'Geist Mono',monospace; font-size:14px; letter-spacing:.16em; text-transform:uppercase; color:#A98E4E; margin-bottom:14px;">Pillar 04 · Channel Features</div>
+      <h2 style="margin:0 0 8px; font-size:38px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Climb the collab ladder — bottom up.</h2>
+      <p style="margin:0 0 24px; font-size:18px; color:#6A6970;">Distribution compounds: each rung borrows a larger audience's trust.</p>
+      <div style="display:flex; flex-direction:column; gap:9px;">
+        <sc-for list="{{ ladder }}" as="l" hint-placeholder-count="4">
+          <div style="display:grid; grid-template-columns:150px 1fr 1.5fr; gap:22px; align-items:center; background:#fff; border:1px solid #ECEAE5; border-radius:12px; padding:14px 20px; border-left:4px solid {{ l.tone }};" style-hover="box-shadow:0 5px 14px rgba(150,120,90,0.08);">
+            <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Geist Mono',monospace; font-size:12px; color:#9B9AA2;">{{ l.num }}</span><span style="font-size:17px; font-weight:700;">{{ l.tier }}</span></div>
+            <div style="font-size:14.5px; line-height:1.45; color:#5A5961;">{{ l.who }}</div>
+            <div style="font-size:14.5px; line-height:1.45; color:#3C3B42;">{{ l.how }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- MONETIZATION (Pillar 05) -->
+  <sc-if value="{{ showMonet }}" hint-placeholder-val="{{ true }}">
+  <section id="monetization" style="padding:64px 40px 40px; max-width:1120px; margin:0 auto;">
+    <div style="font-family:'Geist Mono',monospace; font-size:14px; letter-spacing:.16em; text-transform:uppercase; color:#A98E4E; margin-bottom:14px;">Pillar 05 · Monetization</div>
+    <h2 style="margin:0 0 8px; font-size:42px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Bridge Shorts into product.</h2>
+    <p style="margin:0 0 28px; font-size:19px; line-height:1.5; color:#6A6970; max-width:720px;">The 30-Day Challenge funnel depends on comments today. Weave offers across a few selected videos — or anchor them in the trailer — instead of polluting every upload.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+      <sc-for list="{{ monetization }}" as="mo" hint-placeholder-count="2">
+        <div style="padding:30px 28px; background:#fff; border:1px solid #ECEAE5; border-radius:18px;" style-hover="border-color:#E5D6B8; box-shadow:0 6px 20px rgba(169,142,78,0.08);">
+          <div style="font-family:'Geist Mono',monospace; font-size:13px; color:{{ mo.tone }}; margin-bottom:10px;">{{ mo.tag }}</div>
+          <div style="font-size:23px; font-weight:700; margin-bottom:8px; line-height:1.2;">{{ mo.title }}</div>
+          <div style="font-size:16.5px; line-height:1.55; color:#5A5961;">{{ mo.body }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- METRICS + INTERACTIVE CURVE -->
+  <section id="metrics" style="padding:64px 40px 40px; max-width:1120px; margin:0 auto;">
+    <div style="font-family:'Geist Mono',monospace; font-size:14px; letter-spacing:.16em; text-transform:uppercase; color:#9E5A7C; margin-bottom:14px;">03 · Metrics to track</div>
+    <h2 style="margin:0 0 8px; font-size:42px; font-weight:700; letter-spacing:-0.02em; line-height:1.1;">Test, test, test.</h2>
+    <p style="margin:0 0 30px; font-size:19px; line-height:1.55; color:#5A5961; max-width:780px;">Once we have history on these metrics, we can read patterns and find what to test next to lift views and retention. A/B tests apply to <em>everything</em> in content, and YouTube Analytics gives the detailed data to run them properly.</p>
+
+    <div style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:44px; align-items:start;">
+      <div>
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; color:#9B9AA2; margin-bottom:18px; line-height:1.5;">Write the numbers in Notion every Monday. If a metric drops two weeks in a row, that's a signal worth investigating.</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+            <div style="display:flex; gap:16px; align-items:baseline; padding-bottom:14px; border-bottom:1px solid #EDEBE6;">
+              <div style="font-family:'Geist Mono',monospace; font-size:14px; color:{{ m.tone }}; min-width:26px;">{{ m.num }}</div>
+              <div><div style="font-size:20px; font-weight:700;">{{ m.title }}</div><div style="font-size:16px; line-height:1.5; color:#5A5961;">{{ m.body }}</div></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(160deg,#FCF7F9,#F5F7FB); border:1px solid #EAE7EF; border-radius:20px; padding:30px 34px;">
+        <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#B0728F; margin-bottom:4px;">The retention valley · interactive</div>
+        <h3 style="margin:0 0 4px; font-size:24px; font-weight:700; line-height:1.15;">Hover along the curve.</h3>
+        <div ref="{{ chartWrap }}" style="position:relative; margin-top:10px; cursor:crosshair;">
+          <svg ref="{{ chartSvg }}" viewBox="0 0 800 360" style="width:100%; height:auto; display:block;" font-family="Geist Mono, monospace">
+            <defs>
+              <linearGradient id="curveg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E79BBA"></stop><stop offset="0.45" stop-color="#9B8BD6"></stop><stop offset="1" stop-color="#7FBFA0"></stop></linearGradient>
+              <linearGradient id="fillg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9A2CC" stop-opacity="0.18"></stop><stop offset="1" stop-color="#C9A2CC" stop-opacity="0"></stop></linearGradient>
+            </defs>
+            <line x1="64" y1="36" x2="64" y2="296" stroke="#DBD8D2" stroke-width="2"></line>
+            <line x1="64" y1="296" x2="772" y2="296" stroke="#DBD8D2" stroke-width="2"></line>
+            <rect x="196" y="36" width="118" height="260" fill="#E79BBA" opacity="0.10"></rect>
+            <path ref="{{ areaPath }}" d="M70,96 C160,118 210,86 274,78 C330,71 350,300 408,330 L408,296 L70,296 Z" fill="url(#fillg)"></path>
+            <path ref="{{ linePath }}" d="M70,96 C160,118 210,86 274,78 C330,71 350,300 408,330 C470,360 620,250 760,205" fill="none" stroke="url(#curveg)" stroke-width="5" stroke-linecap="round"></path>
+            <circle cx="274" cy="78" r="7" fill="#fff" stroke="#C9628F" stroke-width="3.5"></circle>
+            <circle cx="408" cy="330" r="7" fill="#fff" stroke="#7FA8DE" stroke-width="3.5"></circle>
+            <text x="274" y="58" text-anchor="middle" font-size="15" fill="#9E5A7C">rewatched</text>
+            <text x="420" y="352" text-anchor="middle" font-size="15" fill="#5E84B0">valley (skip)</text>
+            <text x="58" y="32" text-anchor="end" font-size="13" fill="#A7A5AC">retention</text>
+            <text x="770" y="320" text-anchor="end" font-size="13" fill="#A7A5AC">duration →</text>
+            <g ref="{{ cursor }}" style="opacity:0;">
+              <line ref="{{ cursorLine }}" x1="0" y1="36" x2="0" y2="296" stroke="#B58BCB" stroke-width="1.5" stroke-dasharray="4 4"></line>
+              <circle ref="{{ cursorDot }}" cx="0" cy="0" r="6" fill="#9E5A7C"></circle>
+            </g>
+          </svg>
+          <div ref="{{ tip }}" style="position:absolute; pointer-events:none; opacity:0; transform:translate(-50%,-120%); background:#1B1B20; color:#fff; padding:8px 12px; border-radius:9px; font-size:13px; line-height:1.4; max-width:200px; box-shadow:0 6px 18px rgba(0,0,0,0.18); transition:opacity .12s;"></div>
+        </div>
+        <p style="margin:14px 0 0; font-size:16px; line-height:1.55; color:#5A5961;">A valley reveals 2 scenarios: viewers <strong>skipped</strong> the segment (the obvious read) — or, right before the valley, there's a moment they <strong>rewatched several times</strong>. That high-value moment becomes a <strong style="color:#9E5A7C;">Short / hook</strong> that funnels back into the full video.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <section style="padding:24px 40px 64px; max-width:1120px; margin:0 auto;">
+    <div style="background:linear-gradient(120deg,#1B1B20,#2A2331); border-radius:24px; padding:54px 48px; color:#fff; position:relative; overflow:hidden;">
+      <div style="position:absolute; bottom:-120px; right:-80px; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle,#E79BBA,#7FA8DE 60%,rgba(0,0,0,0) 100%); opacity:.32; pointer-events:none;"></div>
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#D9A9C4; margin-bottom:16px;">Next steps</div>
+      <h2 style="margin:0; font-size:40px; font-weight:800; letter-spacing:-0.025em; line-height:1.08; max-width:720px;">Let's schedule a call and turn this into a plan for your channel.</h2>
+      <div style="margin-top:30px; display:flex; flex-wrap:wrap; gap:14px;">
+        <a href="https://www.linkedin.com/in/smartinsmarina/" target="_blank" rel="noopener" style="text-decoration:none; padding:14px 24px; border-radius:12px; background:#fff; color:#1B1B20; font-weight:600; font-size:16px;" style-hover="background:#F4DCE8;">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding:40px 40px 64px; border-top:1px solid #ECEAE5;">
+    <div style="max-width:1120px; margin:0 auto; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:11px; font-weight:700;"><span style="width:12px; height:12px; border-radius:50%; background:linear-gradient(135deg,#E79BBA,#7FA8DE);"></span> Channel Review · @ItsMariahBrunner</div>
+      <div style="font-family:'Geist Mono',monospace; font-size:13px; color:#74737B; display:flex; gap:18px; flex-wrap:wrap;">
+        <span>@smartinsmarina</span>
+        <a href="https://www.linkedin.com/in/smartinsmarina/" target="_blank" rel="noopener" style="text-decoration:none; color:#74737B; border-bottom:1px solid #D8D6D1;">LinkedIn ↗</a>
+        <span style="color:#B5B4BA;">June 2026</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { pillar: 0, funnelHover: 0 };
+
+  chartWrap = React.createRef();
+  chartSvg = React.createRef();
+  linePath = React.createRef();
+  cursor = React.createRef();
+  cursorLine = React.createRef();
+  cursorDot = React.createRef();
+  tip = React.createRef();
+
+  componentDidMount() {
+    const lp = this.linePath.current;
+    if (lp) {
+      const len = lp.getTotalLength();
+      lp.style.strokeDasharray = len;
+      lp.style.strokeDashoffset = len;
+      lp.style.transition = 'stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)';
+      const io = new IntersectionObserver((es) => {
+        es.forEach(e => { if (e.isIntersecting) { lp.style.strokeDashoffset = 0; io.disconnect(); } });
+      }, { threshold: 0.4 });
+      io.observe(lp);
+    }
+    const wrap = this.chartWrap.current, svg = this.chartSvg.current;
+    if (wrap && svg && lp) {
+      this._move = (ev) => {
+        const r = svg.getBoundingClientRect();
+        const px = ev.clientX - r.left;
+        const vbX = (px / r.width) * 800;
+        if (vbX < 70 || vbX > 760) { this._hideCursor(); return; }
+        const pt = this._yAt(lp, vbX);
+        if (!pt) return;
+        const scale = r.width / 800;
+        this.cursorLine.current.setAttribute('x1', vbX);
+        this.cursorLine.current.setAttribute('x2', vbX);
+        this.cursorDot.current.setAttribute('cx', pt.x);
+        this.cursorDot.current.setAttribute('cy', pt.y);
+        this.cursor.current.style.opacity = 1;
+        const tip = this.tip.current;
+        let label;
+        if (vbX >= 196 && vbX <= 314) label = '<b>Rewatched segment</b><br>becomes a Short / hook for the full video';
+        else if (vbX > 314 && vbX <= 470) label = '<b>Valley</b><br>skipped — or rewatched the segment before it';
+        else { const rp = Math.max(0, Math.min(100, Math.round((296 - pt.y) / 260 * 100))); label = 'retention ≈ ' + rp + '%'; }
+        tip.innerHTML = label;
+        tip.style.left = (pt.x * scale) + 'px';
+        tip.style.top = (pt.y * scale) + 'px';
+        tip.style.opacity = 1;
+      };
+      this._leave = () => this._hideCursor();
+      wrap.addEventListener('mousemove', this._move);
+      wrap.addEventListener('mouseleave', this._leave);
+    }
+  }
+  componentWillUnmount() {
+    const wrap = this.chartWrap.current;
+    if (wrap) { wrap.removeEventListener('mousemove', this._move); wrap.removeEventListener('mouseleave', this._leave); }
+  }
+  _hideCursor() { if (this.cursor.current) this.cursor.current.style.opacity = 0; if (this.tip.current) this.tip.current.style.opacity = 0; }
+  _yAt(path, x) {
+    const total = path.getTotalLength();
+    let lo = 0, hi = total, p = null;
+    for (let i = 0; i < 18; i++) {
+      const mid = (lo + hi) / 2; p = path.getPointAtLength(mid);
+      if (p.x < x) lo = mid; else hi = mid;
+    }
+    return p;
+  }
+
+  goPillar(i, id) {
+    this.setState({ pillar: i }, () => {
+      const el = document.getElementById(id);
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior:'smooth' });
+    });
+  }
+
+  renderVals() {
+    const T = { pink:'#C9628F', purple:'#8E6FB8', blue:'#5E84B0', green:'#5C9B7A', gold:'#A98E4E' };
+
+    const diagCards = [
+      { tag:'✓ Don\u2019t touch', tone:T.green, title:'A surgically clear niche', body:'You are the translator of Claude for non-technical people. Not a generic AI guru — and that is gold in 2026.' },
+      { tag:'✓ Don\u2019t touch', tone:T.green, title:'Instant credibility', body:'Amazon and Meta in the bio establish authority. Keep it visible in the banner, the first line of the About, and at least one pinned video.' },
+      { tag:'✓ Don\u2019t touch', tone:T.green, title:'Consistent voice across platforms', body:'@itsmariahbrunner is coherent across TikTok, Instagram, Threads, and email. The brand already exists — let YouTube carry more of that weight.' },
+    ];
+    const tabBase = 'padding:10px 18px; border-radius:10px; border:1px solid #E3DEE6; cursor:pointer; font-family:inherit;';
+    const on = 'background:#1B1B20; color:#fff; border-color:#1B1B20;';
+    const off = 'background:#fff; color:#5C5B63;';
+
+    const pillarData = [
+      { num:'01', label:'Channel Structure', short:'Structure', headline:'Turn the home page into a landing page.', points:[
+        { tone:T.pink, lead:'Banner with the live offer. ', rest:'"I am Mariah. Learn Claude before Monday." plus the Challenge identity — the first conversion surface on the channel. Add hashtags to the bio.' },
+        { tone:T.purple, lead:'Channel trailer (30\u201345s). ', rest:'Who you are, who you talk to, and what the viewer gets by subscribing. Storytelling builds familiarity and retention.' },
+        { tone:T.blue, lead:'Sections on the home page. ', rest:'By profession (Weekend Bootcamp, 25 professions \u2192 a SEO/GEO matrix); by platform (Claude, ChatGPT, Perplexity); by format (collabs, Shorts, live); by theme.' },
+        { tone:T.green, lead:'Themed playlists. ', rest:'Same logic as the sections: "Claude for Marketing", "Prompts that save hours", "Workflows with agents".' },
+        { tone:T.gold, lead:'Posts & Community tabs. ', rest:'Surface blog excerpts — instead of external links, point to the keywords readers can search on your site.' },
+      ]},
+      { num:'02', label:'Video Structure', short:'Video', headline:'Name every video for discovery.', points:[
+        { tone:T.pink, lead:'CTAs & titles for GEO. ', rest:'Test copy designed for AI retrieval, not only classic SEO ranking.' },
+        { tone:T.purple, lead:'End cards. ', rest:'Where does the viewer go next — email, a follow, or another video? Pick one destination.' },
+        { tone:T.blue, lead:'Titles on real queries. ', rest:'"Claude vs ChatGPT for writing email" — and the exact phrasing people type into AI engines, where discovery now starts.' },
+        { tone:T.green, lead:'The first line is SEO. ', rest:'The first 5 seconds of the script and the first line of the description become metadata. Say "Claude AI" early, on purpose.' },
+        { tone:T.gold, lead:'Hashtags & series naming. ', rest:'#claudeai #aiproductivity #marketingai (specific beats generic); prefix "Claude 101: …" / "AI Money: …" so the algorithm pattern-matches.' },
+      ]},
+      { num:'03', label:'Content & Formats', short:'Formats', headline:'Serialize content, then diversify formats.', points:[
+        { tone:T.pink, lead:'Serialize across surfaces. ', rest:'Serialized vlogs, blog content on Posts, IG repurposed to Shorts, long form split between membership and the open channel.' },
+        { tone:T.purple, lead:'Daily vlogs as brand. ', rest:'Expand the personal brand — leaving the 9-to-5, building companies solo, life between two countries, time-lapse routines.' },
+        { tone:T.blue, lead:'Shorts \u2192 long form \u2192 live. ', rest:'Shorts sell low-ticket; long form (8\u201320 min) sells bootcamps, agents and cohorts; podcast and live build trust. See the funnel below.' },
+      ]},
+      { num:'04', label:'Channel Features', short:'Features', headline:'Climb the collab ladder, bottom up.', points:[
+        { tone:T.gold, lead:'Distribution compounds. ', rest:'Peers \u2192 ecosystem \u2192 adjacent verticals \u2192 authority. Each rung borrows a larger audience\u2019s trust. See the ladder below.' },
+        { tone:T.blue, lead:'Co-create to distribute. ', rest:'Swap Shorts with peers, offer yourself as an official case study to the ecosystem, and pitch adjacent educators on Claude.' },
+      ]},
+      { num:'05', label:'Monetization', short:'Money', headline:'Turn attention into recurring revenue.', points:[
+        { tone:T.gold, lead:'YouTube Shopping. ', rest:'Set it up the moment you join YPP. Pin store pieces so links lead straight to purchase; sell co-created products with partner brands.' },
+        { tone:T.pink, lead:'Bridge Shorts \u2192 product. ', rest:'The 30-Day Challenge funnel depends on comments today — weave offers across selected videos or anchor them in the trailer.' },
+        { tone:T.purple, lead:'Channel Membership. ', rest:'Exclusive content: expand two of the week\u2019s Shorts into one long form that shows the full prompt and workflow.' },
+      ]},
+    ];
+    const pillars = pillarData.map((p, i) => {
+      const active = i === this.state.pillar;
+      return {
+        num:p.num, short:p.short,
+        select: () => this.setState({ pillar:i }),
+        chipStyle: 'cursor:pointer; text-align:left; padding:14px 14px; border-radius:13px; font-family:inherit; transition:all .15s; '
+          + (active
+            ? 'background:linear-gradient(135deg,#F4DCE8,#E5DBF4); border:1px solid #DCC4DE; color:#1B1B20;'
+            : 'background:#fff; border:1px solid #ECE6F0; color:#6A6970;'),
+      };
+    });
+    const activePillar = pillarData[this.state.pillar];
+
+    const funnelData = [
+      { name:'Shorts', stage:'Awareness', dur:'30\u201360s', body:'Hook, products and a prompt demo.', goal:'spread, saves and new followers', bar:'#F1B6CC', barW:'40%' },
+      { name:'Long form', stage:'Consideration', dur:'variable', body:'Build-along or deep dive.', goal:'watch time, interactions and email capture', bar:'#B6C4F1', barW:'70%' },
+      { name:'Podcast / Live', stage:'Conversion', dur:'variable', body:'Guests (30 min) plus audience Q&A.', goal:'trust + physical & digital product sales', bar:'#B6E1C6', barW:'100%' },
+    ];
+    const funnel = funnelData.map((f, i) => ({
+      ...f,
+      hover: () => this.setState({ funnelHover:i }),
+      cardStyle: 'background:#fff; border-radius:18px; padding:26px 26px; transition:all .18s; cursor:default; '
+        + (i === this.state.funnelHover
+          ? 'border:1px solid #DCC4DE; box-shadow:0 10px 30px rgba(150,110,160,0.12); transform:translateY(-4px);'
+          : 'border:1px solid #ECEAE5;'),
+    }));
+
+    const ladder = [
+      { num:'01', tier:'Peers', tone:'#F1B6CC', who:'Creators in the 5k\u201330k range in AI and productivity.', how:'"Let\u2019s swap Shorts — you react to my prompt, I react to yours." Low friction, fast reciprocity.' },
+      { num:'02', tier:'Ecosystem', tone:'#C9A2DC', who:'Claude (official), Manus, Stan, Skool.', how:'Offer yourself as an official case study. They publish, you gain authority by association.' },
+      { num:'03', tier:'Adjacent verticals', tone:'#9BB4E0', who:'Educators outside AI (finance, design, HR).', how:'"Let me show you how Claude solves a specific pain for your audience."' },
+      { num:'04', tier:'Authority', tone:'#9FCDB0', who:'Large B2B podcasts and events like AI Engineer Summit.', how:'Lead with a number: "X% use Claude wrong — I\u2019ll prove it." Concrete, demo-ready, no fluff.' },
+    ];
+
+    const monetization = [
+      { tag:'Shopping', tone:T.gold, title:'YouTube Shopping', body:'Set it up the moment you join YPP. Pin store pieces on videos so links lead straight to purchase, and use it to sell co-created products with partner brands.' },
+      { tag:'Membership', tone:T.purple, title:'Channel Membership', body:'Exclusive content for subscribers. Pick two of the week\u2019s Shorts and expand them into one long form that shows the full prompt and workflow.' },
+    ];
+
+    const metrics = [
+      { num:'01', tone:T.pink, title:'Hook retention', body:'% still watching after the first 3 seconds. If it drops, rewrite the hook — the topic is rarely the problem.' },
+      { num:'02', tone:T.purple, title:'Views + CTR + Avg view duration', body:'The trio is the basic read on how content performs with your audience.' },
+      { num:'03', tone:T.blue, title:'Shares, saves, likes, comments', body:'Supplement the trio above — how the audience interacts with your content.' },
+      { num:'04', tone:T.green, title:'New email signups / week', body:'The only metric that truly matters at the funnel layer. This pays for the cohort and the agents.' },
+    ];
+
+    return {
+      diagCards,
+      tabFocus: () => { const el = document.getElementById('pillars'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior:'smooth' }); },
+      tabAStyle: tabBase + on,
+      tabBStyle: tabBase + off,
+      pillars, activePillar,
+      showFunnel: this.state.pillar === 2,
+      showLadder: this.state.pillar === 3,
+      showMonet: this.state.pillar === 4,
+      navFormats: () => this.goPillar(2, 'formats'),
+      navFeatures: () => this.goPillar(3, 'features'),
+      navMonet: () => this.goPillar(4, 'monetization'),
+      funnel, ladder, monetization, metrics,
+      chartWrap:this.chartWrap, chartSvg:this.chartSvg, linePath:this.linePath, areaPath:React.createRef(),
+      cursor:this.cursor, cursorLine:this.cursorLine, cursorDot:this.cursorDot, tip:this.tip,
+    };
+  }
+}
+</script>
+</body>
+</html>
